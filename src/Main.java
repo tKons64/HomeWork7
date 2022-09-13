@@ -3,6 +3,7 @@ public class Main {
     public static void main(String[] args) {
         task1_1();task1_2();task1_3();
         task2_1();task2_2();task2_3();task2_4();
+        task3_1();task3_2();
     }
 
     public static void task1_1() {
@@ -125,4 +126,44 @@ public class Main {
        }
     }
 
-}
+    public static void task3_1() {
+        System.out.println("");
+        System.out.println("Задание №3.1");
+
+        int cometYear = 79;
+        int nextCometYear = cometYear;
+        int thisYear = 2022;
+        int startYear = thisYear-200;
+        int endYear = thisYear+100;
+
+        while (nextCometYear < endYear){
+            if (nextCometYear > startYear && nextCometYear < endYear){
+                System.out.println(nextCometYear);
+            }
+            nextCometYear = nextCometYear + 79;
+        }
+    }
+
+    public static void task3_2() {
+        System.out.println("");
+        System.out.println("Задание №3.2");
+
+        byte factor = 1;
+        byte term = 2;
+        int result = 0;
+
+        //do {
+        //    result = term * factor;
+        //    System.out.println(term + "*" + factor + "=" + result);
+        //    factor++;
+        //} while (factor <= 10);
+
+        // в критериях оценки указано использовать цикл for
+        for (;factor <= 10;factor++){
+            result = term * factor;
+            System.out.println(term + "*" + factor + "=" + result);
+        }
+    }
+
+
+    }
