@@ -1,7 +1,8 @@
 public class Main {
 
     public static void main(String[] args) {
-        task1_1();task1_2();task1_3();
+        //task1_1();task1_2();task1_3();
+        task2_1();task2_2();task2_3();task2_4();
     }
 
     public static void task1_1() {
@@ -56,6 +57,72 @@ public class Main {
             System.out.println("Год " + year + ", численность населения составляет - " + population);
             year++;
         }
+    }
+
+    public static void task2_1() {
+        System.out.println("");
+        System.out.println("Задание №2.1");
+
+        double deposit = 15_000;
+        float percentMonth = 0.07f;
+        byte period = 0;
+
+        while(deposit < 12_000_000){
+            deposit = (deposit + (deposit * percentMonth));
+            period++;
+            System.out.println("Месяц - " + period + ", сумма накоплений равна " + (long)deposit + " рублей");
+        }
+    }
+
+    public static void task2_2() {
+        System.out.println("");
+        System.out.println("Задание №2.2");
+
+        double deposit = 15_000;
+        float percentMonth = 0.07f;
+        byte period = 0;
+
+        while(deposit < 12_000_000){
+            deposit = (deposit + (deposit * percentMonth));
+            period++;
+            if (period % 6 == 0) {
+                System.out.println("Месяц - " + period + ", сумма накоплений равна " + (long)deposit + " рублей");
+            }
+        }
+    }
+
+    public static void task2_3() {
+        System.out.println("");
+        System.out.println("Задание №2.3");
+
+        double deposit = 15_000;
+        float percentMonth = 0.07f;
+        byte period = 0;
+
+        while(period <= 108){
+            deposit = (deposit + (deposit * percentMonth));
+            period++;
+            if (period % 6 == 0) {
+                System.out.println("Месяц - " + period + ", сумма накоплений равна " + (long)deposit + " рублей");
+            }
+        }
+    }
+
+    public static void task2_4() {
+        System.out.println("");
+        System.out.println("Задание №2.4");
+
+       int fridayNumberInWeek = 2;
+       int nextFriday = fridayNumberInWeek;
+       byte dayInMonth = 1;
+
+       while (dayInMonth <= 31){
+           if (nextFriday == dayInMonth) {
+               System.out.println("Сегодня пятница, " + nextFriday + "-е число. Необходимо подготовить отчет");
+               nextFriday = nextFriday + 7;
+           }
+           dayInMonth++;
+       }
     }
 
 }
