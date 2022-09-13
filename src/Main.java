@@ -4,6 +4,7 @@ public class Main {
         task1_1();task1_2();task1_3();
         task2_1();task2_2();task2_3();task2_4();
         task3_1();task3_2();
+        task4_1();task4_2();
     }
 
     public static void task1_1() {
@@ -165,5 +166,44 @@ public class Main {
         }
     }
 
+    public static void task4_1() {
+        System.out.println("");
+        System.out.println("Задание №4.1, со звездочкой");
+
+        for(int i = 1; i <= 30; i++){
+            if (i % 3 == 0){
+                System.out.print(i + ": ping");
+                if (i % 5 == 0){
+                    System.out.println(" pong");
+                }else {
+                    System.out.println("");
+                }
+            }else if (i % 5 == 0){
+                System.out.println(i + ": pong");
+            }else {
+                System.out.println(i + ": ");
+            }
+        }
+    }
+
+    public static void task4_2() {
+        System.out.println("");
+        System.out.println("Задание №4.2, со звездочкой");
+
+        int Number0 = 0;
+        int Number1 = 1;
+        int result = Number0+Number1;
+
+        System.out.print(Number0 + ", " + Number1);
+
+        int i = 2;
+        do {
+            result = Number0 + Number1;
+            Number0 = Number1;
+            Number1 = result;
+            System.out.print(", " + result);
+            i++;
+        } while (i < 10);
+    }
 
     }
