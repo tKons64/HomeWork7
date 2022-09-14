@@ -1,10 +1,17 @@
 public class Main {
 
     public static void main(String[] args) {
-        task1_1();task1_2();task1_3();
-        task2_1();task2_2();task2_3();task2_4();
-        task3_1();task3_2();
-        task4_1();task4_2();
+        task1_1();
+        task1_2();
+        task1_3();
+        task2_1();
+        task2_2();
+        task2_3();
+        task2_4();
+        task3_1();
+        task3_2();
+        task4_1();
+        task4_2();
     }
 
     public static void task1_1() {
@@ -15,9 +22,10 @@ public class Main {
         int payment = 29_000;
         double deposit = 0;
         double percentYear = 12;
+        int targetDeposit = 2_459_000;
 
         double percentMonth = (percentYear / 12)/100;
-        while(deposit < 2_459_000){
+        while(deposit < targetDeposit){
             deposit = (deposit + (deposit * percentMonth));
             deposit = deposit + payment;
             period++;
@@ -31,14 +39,13 @@ public class Main {
 
         byte i = 1;
 
-        while (i < 10){
+        while (i <= 10){
             System.out.print(i + " ");
             i++;
         }
-        System.out.print(i + " ");
         System.out.println("");
 
-        for (; i > 0; i--){
+        for (i = 10; i > 0; i--){
             System.out.print(i + " ");
         }
         System.out.println("");
@@ -48,15 +55,15 @@ public class Main {
         System.out.println("");
         System.out.println("Задание №1.3");
 
-        int population = 12_000_000;
-        byte birthRate = 17; // рождаемость на 1000 человек
-        byte deathRate = 8; // смертность на 1000 человек
+        double population = 12_000_000;
+        float birthRate = 17/1000f; // рождаемость на 1000 человек
+        float deathRate = 8/1000f; // смертность на 1000 человек
 
         byte year = 1;
 
         while (year <= 10) {
-            population = population + ((population / 1000) * birthRate) - ((population / 1000) * deathRate);
-            System.out.println("Год " + year + ", численность населения составляет - " + population);
+            population = population + (population * birthRate) - (population * deathRate);
+            System.out.println("Год " + year + ", численность населения составляет - " + (int)population);
             year++;
         }
     }
@@ -68,8 +75,9 @@ public class Main {
         double deposit = 15_000;
         float percentMonth = 0.07f;
         byte period = 0;
+        double targetDeposit = 12_000_000;
 
-        while(deposit < 12_000_000){
+        while(deposit < targetDeposit){
             deposit = (deposit + (deposit * percentMonth));
             period++;
             System.out.println("Месяц - " + period + ", сумма накоплений равна " + (long)deposit + " рублей");
@@ -83,8 +91,9 @@ public class Main {
         double deposit = 15_000;
         float percentMonth = 0.07f;
         byte period = 0;
+        double targetDeposit = 12_000_000;
 
-        while(deposit < 12_000_000){
+        while(deposit < targetDeposit){
             deposit = (deposit + (deposit * percentMonth));
             period++;
             if (period % 6 == 0) {
@@ -100,8 +109,9 @@ public class Main {
         double deposit = 15_000;
         float percentMonth = 0.07f;
         byte period = 0;
+        double targetPeriod = 9 * 12; // 9 лет, это 108 месяцев, 9 * 12
 
-        while(period <= 108){
+        while(period <= targetPeriod){
             deposit = (deposit + (deposit * percentMonth));
             period++;
             if (period % 6 == 0) {
@@ -190,17 +200,17 @@ public class Main {
         System.out.println("");
         System.out.println("Задание №4.2, со звездочкой");
 
-        int Number0 = 0;
-        int Number1 = 1;
-        int result = Number0+Number1;
+        int number0 = 0;
+        int number1 = 1;
+        int result = number0+number1;
 
-        System.out.print(Number0 + ", " + Number1);
+        System.out.print(number0 + ", " + number1);
 
         int i = 2;
         do {
-            result = Number0 + Number1;
-            Number0 = Number1;
-            Number1 = result;
+            result = number0 + number1;
+            number0 = number1;
+            number1 = result;
             System.out.print(", " + result);
             i++;
         } while (i < 10);
